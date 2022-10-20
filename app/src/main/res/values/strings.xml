@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">NewsBreeze</string>
+    <string name="short_app_name">Breeze</string>
+    <string name="search">Search</string>
+    <string name="read">Read</string>
+    <string name="save">Save</string>
+    <string name="dummy_news_pub_name">Nitin Menon</string>
+    <string name="dummy_news_source">News Source</string>
+    <string name="dummy_news_long_des">Oops ! The content is not available for this news.</string>
+    <string name="saved">Saved</string>
+    <string name="saved_news">Saved News</string>
+    <string name="your_news_cart">Your news cart is empty</string>
+    <string name="news_saved_message">Hurray ! Your news has been saved</string>
+    <string name="api_key">e66ebc7fdd27444fb4ceba4c726bd374</string>
+
+</resources>

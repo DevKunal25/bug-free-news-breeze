@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ReadNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNewsImageReadNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp300"
+            android:background="@color/black"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivThinLayerReadNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp300"
+            android:background="@color/color_33000000"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackReadNewsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginStart="@dimen/dp30"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSaveReadNewsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_save_3"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp30"
+            app:layout_constraintTop_toTopOf="@id/ivBackReadNewsFragment"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewsPubDateReadNewsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:fontFamily="@font/source_sans_roman"
+            android:layout_marginBottom="@dimen/dp9"
+            app:layout_constraintLeft_toLeftOf="@id/ivBackReadNewsFragment"
+            app:layout_constraintBottom_toTopOf="@id/tvNewsTitleReadNewsFragment"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewsTitleReadNewsFragment"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp27"
+            android:fontFamily="@font/queens_park_bold"
+            android:maxLines="2"
+            android:lineSpacingExtra="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp80"
+            android:layout_marginEnd="@dimen/dp80"
+            android:layout_marginBottom="@dimen/dp19"
+            app:layout_constraintLeft_toLeftOf="@id/ivBackReadNewsFragment"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/clLongDescriptionReadNewsFragment"/>
+
+        <View
+            android:id="@+id/viMarkReadNewsFragment"
+            android:layout_width="@dimen/dp0.5"
+            android:layout_height="@dimen/dp0.5"
+            android:layout_marginBottom="@dimen/dp40"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivNewsImageReadNewsFragment"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLongDescriptionReadNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:background="@drawable/bg_long_description"
+            app:layout_constraintTop_toBottomOf="@id/viMarkReadNewsFragment"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPublisherImageReadNewsFragment"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp0"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginStart="@dimen/dp30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPublisherImageReadNewsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_source"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp17"
+                android:layout_marginStart="@dimen/dp17"
+                android:layout_marginRight="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp30"
+                app:layout_constraintTop_toTopOf="@id/cvPublisherImageReadNewsFragment"
+                app:layout_constraintLeft_toRightOf="@id/cvPublisherImageReadNewsFragment"
+                app:layout_constraintRight_toLeftOf="@id/cvSaveNewsReadNewsFragment"
+                app:layout_constraintBottom_toBottomOf="@id/cvPublisherImageReadNewsFragment">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNewsPublisherNameReadNewsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_news_pub_name"
+                    android:textColor="@color/color_181818"
+                    android:textSize="@dimen/sp20"
+                    android:fontFamily="@font/source_sans_roman"
+                    android:maxLines="1"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNewsSourceReadNewsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_news_source"
+                    android:textColor="@color/color_C1C0BF"
+                    android:textSize="@dimen/sp16"
+                    android:fontFamily="@font/source_sans_roman"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSaveNewsReadNewsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp8"
+                app:cardElevation="@dimen/dp0"
+                app:cardBackgroundColor="@color/color_94C77D"
+                app:contentPaddingTop="@dimen/dp7"
+                app:contentPaddingLeft="@dimen/dp30"
+                app:contentPaddingRight="@dimen/dp30"
+                app:contentPaddingBottom="@dimen/dp7"
+                android:layout_marginRight="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp30"
+                app:layout_constraintTop_toTopOf="@id/cvPublisherImageReadNewsFragment"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/cvPublisherImageReadNewsFragment">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSaveReadNewsFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    android:fontFamily="@font/source_sans_roman"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ScrollView
+                style="@style/scrollViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_marginTop="@dimen/dp28"
+                android:layout_marginBottom="@dimen/dp23"
+                app:layout_constraintTop_toBottomOf="@id/cvPublisherImageReadNewsFragment"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNewsLongDesReadNewsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_news_long_des"
+                    android:textColor="@color/color_181818"
+                    android:textSize="@dimen/sp22"
+                    android:fontFamily="@font/queens_park"
+                    android:lineSpacingExtra="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp30"/>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

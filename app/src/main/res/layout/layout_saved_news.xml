@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNewsImageSavedNewsFragment"
+        android:layout_width="@dimen/dp105"
+        android:layout_height="@dimen/dp105"
+        app:cardCornerRadius="@dimen/dp15"
+        app:cardElevation="@dimen/dp2"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNewsImageSavedNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_placeholder_2"
+            android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        app:layout_constraintTop_toTopOf="@id/cvNewsImageSavedNewsFragment"
+        app:layout_constraintLeft_toRightOf="@id/cvNewsImageSavedNewsFragment"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/cvNewsImageSavedNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewsTitleSavedNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_181818"
+            android:textSize="@dimen/sp19"
+            android:fontFamily="@font/queens_park_bold"
+            android:maxLines="2"
+            android:lineSpacingExtra="@dimen/dp10"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp6">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewsPubDateSavedNewsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_C1C0BF"
+                android:textSize="@dimen/sp16"
+                android:fontFamily="@font/source_sans_roman"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dp3"
+                android:layout_height="@dimen/dp3"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/dp1.5"
+                app:cardBackgroundColor="@color/color_C1C0BF"
+                app:cardElevation="@dimen/dp0"
+                android:layout_marginLeft="@dimen/dp3"
+                android:layout_marginStart="@dimen/dp3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewsPublisherNameSavedNewsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_news_pub_name"
+                android:textColor="@color/color_C1C0BF"
+                android:textSize="@dimen/sp16"
+                android:fontFamily="@font/source_sans_roman"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/dp3"
+                android:layout_marginStart="@dimen/dp3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

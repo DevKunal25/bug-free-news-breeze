@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/latestNewsFragment">
+
+    <fragment
+        android:id="@+id/latestNewsFragment"
+        android:name="com.news.breeze.view.LatestNewsFragment"
+        tools:layout="@layout/fragment_latest_news">
+
+        <action
+            android:id="@+id/actionLatestNewsFragmentToReadNewsFragment"
+            app:destination="@id/readNewsFragment"
+            app:enterAnim="@android:anim/slide_in_left"/>
+
+        <action
+            android:id="@+id/actionLatestNewsFragmentToSavedNewsFragment"
+            app:destination="@id/savedNewsFragment"
+            app:enterAnim="@android:anim/slide_in_left"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/readNewsFragment"
+        android:name="com.news.breeze.view.ReadNewsFragment"
+        tools:layout="@layout/fragment_read_news">
+
+        <action
+            android:id="@+id/actionReadNewsFragmentToLatestNewsFragment"
+            app:popUpTo="@id/latestNewsFragment"/>
+
+        <action
+            android:id="@+id/actionReadNewsFragmentToSavedNewsFragment"
+            app:popUpTo="@id/savedNewsFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.news.breeze.view.SavedNewsFragment"
+        tools:layout="@layout/fragment_saved_news">
+
+        <action
+            android:id="@+id/actionSavedNewsFragmentToReadNewsFragment"
+            app:destination="@id/readNewsFragment"
+            app:enterAnim="@android:anim/slide_in_left"/>
+
+        <action
+            android:id="@+id/actionSavedNewsFragmentToLatestNewsFragment"
+            app:popUpTo="@id/latestNewsFragment"/>
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F8F8FB"
+        tools:context=".view.LatestNewsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContainerLatestNewsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAppLogoLatestNewsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_app_name"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginStart="@dimen/dp30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSavedNewsLatestNewsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardBackgroundColor="@color/color_94C77D"
+                app:contentPadding="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp30"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivAppLogoLatestNewsFragment"
+                app:layout_constraintBottom_toBottomOf="@id/ivAppLogoLatestNewsFragment">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_save"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSearchBarLatestNewsFragment"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp15"
+                app:cardElevation="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp37"
+                app:layout_constraintTop_toBottomOf="@id/ivAppLogoLatestNewsFragment"
+                app:layout_constraintLeft_toLeftOf="@id/ivAppLogoLatestNewsFragment"
+                app:layout_constraintRight_toRightOf="@id/cvSavedNewsLatestNewsFragment">
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@drawable/ic_search"
+                    app:queryHint="@string/search"
+                    app:queryBackground="@null"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContainerLatestNewsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@color/color_94C77D"
+                android:scrollbarSize="@dimen/dp5"
+                tools:itemCount="0"
+                android:layout_marginTop="@dimen/dp30"
+                app:layout_constraintTop_toBottomOf="@id/cvSearchBarLatestNewsFragment"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pbProgressLatestNewsFragment"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

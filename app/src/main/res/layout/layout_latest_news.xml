@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_F8F8FB"
+    android:paddingBottom="@dimen/dp20">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDividerLatestNewsFragment"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="@dimen/dp5"
+        app:cardCornerRadius="@dimen/dp2.5"
+        app:cardElevation="@dimen/dp0"
+        app:cardBackgroundColor="@color/color_A8E8E8F7"
+        android:layout_marginLeft="@dimen/dp60"
+        android:layout_marginRight="@dimen/dp60"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sflShimmerLatestNewsFragment"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        app:layout_constraintTop_toBottomOf="@id/cvDividerLatestNewsFragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvNewsImageLatestNewsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp208"
+                app:cardCornerRadius="@dimen/dp10"
+                app:cardElevation="@dimen/dp0">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNewsImageLatestNewsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_A8E8E8F7"
+                    android:scaleType="fitXY"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewsTitleLatestNewsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_181818"
+                android:textSize="@dimen/sp27"
+                android:fontFamily="@font/queens_park_bold"
+                android:maxLines="2"
+                android:lineSpacingExtra="@dimen/dp10"
+                android:background="@color/color_A8E8E8F7"
+                android:layout_marginTop="@dimen/dp18"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewsShortDesLatestNewsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_181818"
+                android:textSize="@dimen/sp22"
+                android:fontFamily="@font/queens_park"
+                android:maxLines="3"
+                android:lineSpacingExtra="@dimen/dp10"
+                android:ellipsize="end"
+                android:background="@color/color_A8E8E8F7"
+                android:layout_marginTop="@dimen/dp9"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewsPubDateLatestNewsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_C1C0BF"
+                android:textSize="@dimen/sp18"
+                android:fontFamily="@font/source_sans_roman"
+                android:background="@color/color_A8E8E8F7"
+                android:layout_marginTop="@dimen/dp9"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSaveLatestNewsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp5"
+        app:cardElevation="@dimen/dp1"
+        app:cardBackgroundColor="@color/color_C1C0BC"
+        app:contentPadding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginRight="@dimen/dp12"
+        android:layout_marginEnd="@dimen/dp12"
+        app:layout_constraintTop_toTopOf="@id/sflShimmerLatestNewsFragment"
+        app:layout_constraintRight_toRightOf="@id/sflShimmerLatestNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSaveLatestNewsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_save_2"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/viMarkLatestNewsFragment"
+        android:layout_width="@dimen/dp0.5"
+        android:layout_height="@dimen/dp0.5"
+        app:layout_constraintTop_toBottomOf="@id/sflShimmerLatestNewsFragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvReadNewsLatestNewsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp8"
+        app:cardElevation="@dimen/dp0"
+        app:cardBackgroundColor="@color/color_94C77D"
+        app:contentPaddingTop="@dimen/dp7"
+        app:contentPaddingLeft="@dimen/dp30"
+        app:contentPaddingRight="@dimen/dp30"
+        app:contentPaddingBottom="@dimen/dp7"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        app:layout_constraintTop_toBottomOf="@id/sflShimmerLatestNewsFragment"
+        app:layout_constraintRight_toRightOf="@id/viMarkLatestNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/read"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:fontFamily="@font/source_sans_roman"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSaveNewsLatestNewsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp8"
+        app:cardElevation="@dimen/dp0"
+        app:cardBackgroundColor="@color/color_94C77D"
+        app:contentPaddingTop="@dimen/dp7"
+        app:contentPaddingLeft="@dimen/dp30"
+        app:contentPaddingRight="@dimen/dp30"
+        app:contentPaddingBottom="@dimen/dp7"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp10"
+        app:layout_constraintTop_toBottomOf="@id/sflShimmerLatestNewsFragment"
+        app:layout_constraintLeft_toRightOf="@id/viMarkLatestNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveLatestNewsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:fontFamily="@font/source_sans_roman"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
